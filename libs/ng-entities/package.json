@@ -1,15 +1,14 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
-  "name": "@angular-training/router",
-  "description": "Router module for @angular-training",
-  "version": "0.0.0",
+  "name": "@salsita/ng-entities",
+  "description": "Enity Repository module for @salsita training",
+  "version": "1.0.0",
   "peerDependencies": {
-    "@angular/common": "5.2.6",
+    "@salsita/ngrx-helpers": "1.0.0",
     "@angular/core": "5.2.6",
-    "@angular/platform-browser": "5.2.6",
-    "@angular/router": "5.2.6",
-    "@ngrx/router-store": "5.0.1",
     "@ngrx/store": "5.1.0",
+    "lodash": "^4.17.4",
+    "normalizr": "^3.2.4",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
@@ -17,8 +16,10 @@
     "lib": {
       "entryFile": "index.ts",
       "umdModuleIds": {
+        "@salsita/ngrx-helpers": "ngrxHelpers",
         "@ngrx/store": "store",
-        "@ngrx/router-store": "routerStore"
+        "lodash": "lodash",
+        "normalizr": "normalizr"
       }
     }
   }
