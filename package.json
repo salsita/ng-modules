@@ -10,25 +10,27 @@
     "libs:ng-entities:build": "ng-packagr -p libs/ng-entities/package.json",
     "libs:ngrx-helpers:build": "ng-packagr -p libs/ngrx-helpers/package.json",
     "libs:ng-router:build": "ng-packagr -p libs/ng-router/package.json",
+    "libs:docs": "yarn libs:ng-api:docs && yarn libs:ng-crud:docs && yarn libs:ng-entities:docs && yarn libs:ngrx-helpers:docs && yarn libs:ng-router:docs",
+    "libs:ng-api:docs": "typedoc --out docs/ng-api --name ng-api --target ES6 --tsconfig tsconfig.dist-libs.json --theme markdown --readme none --mode file --excludeNotExported --excludePrivate --ignoreCompilerErrors  libs/ng-api/index.ts",
+    "libs:ng-crud:docs": "typedoc --out docs/ng-crud --name ng-crud --target ES6 --tsconfig tsconfig.dist-libs.json --theme markdown --readme none --mode file --excludeNotExported --excludePrivate --ignoreCompilerErrors  libs/ng-crud/index.ts",
+    "libs:ng-entities:docs": "typedoc --out docs/ng-entities --name ng-entities --target ES6 --tsconfig tsconfig.dist-libs.json --theme markdown --readme none --mode file --excludeNotExported --excludePrivate --ignoreCompilerErrors  libs/ng-entities/index.ts",
+    "libs:ngrx-helpers:docs": "typedoc --out docs/ngrx-helpers --name ngrx-helpers --target ES6 --tsconfig tsconfig.dist-libs.json --theme markdown --readme none --mode file --excludeNotExported --excludePrivate --ignoreCompilerErrors  libs/ngrx-helpers/index.ts",
+    "libs:ng-router:docs": "typedoc --out docs/ng-router --name ng-router --target ES6 --tsconfig tsconfig.dist-libs.json --theme markdown --readme none --mode file --excludeNotExported --excludePrivate --ignoreCompilerErrors  libs/ng-router/index.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "precommit-lint": "ng lint",
     "precommit": "lint-staged",
-
     "affected:apps": "./node_modules/.bin/nx affected apps",
     "affected:build": "./node_modules/.bin/nx affected build",
     "affected:e2e": "./node_modules/.bin/nx affected e2e",
-
     "format": "./node_modules/.bin/nx format write",
     "format:write": "./node_modules/.bin/nx format write",
     "format:check": "./node_modules/.bin/nx format check",
-
     "update": "./node_modules/.bin/nx update",
     "update:check": "./node_modules/.bin/nx update check",
     "update:skip": "./node_modules/.bin/nx update skip",
-
     "postinstall": "./node_modules/.bin/nx postinstall"
   },
   "private": true,
@@ -72,6 +74,8 @@
     "prettier": "1.10.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
+    "typedoc": "^0.11.1",
+    "typedoc-plugin-markdown": "^1.1.13",
     "typescript": "2.6.2"
   },
   "workspaces": [

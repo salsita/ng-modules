@@ -3,6 +3,9 @@
   "name": "@salsita/ngrx-helpers",
   "description": "ngrx helpers module for @salsita training",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@angular/core": "5.2.6",
     "rxjs": "^5.5.6",

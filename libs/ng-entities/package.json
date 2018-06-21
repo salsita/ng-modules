@@ -3,6 +3,9 @@
   "name": "@salsita/ng-entities",
   "description": "Enity Repository module for @salsita training",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@salsita/ngrx-helpers": "1.0.0",
     "@angular/core": "5.2.6",
